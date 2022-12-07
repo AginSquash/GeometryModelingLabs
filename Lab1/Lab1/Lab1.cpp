@@ -46,7 +46,7 @@ int main(int argc, char** argv)
         textureHeight);
     std::vector<Uint32> bufferForUpdate(textureWidth * textureHeight);
     for (auto& pixel : bufferForUpdate)
-        pixel = 0xaaaaaaaa;
+        pixel = 0xffffffff;
     SDL_UpdateTexture(texture, nullptr, bufferForUpdate.data(), textureWidth * sizeof(bufferForUpdate[0]));
 
     bool programWorks = true;
